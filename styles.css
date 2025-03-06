@@ -55,45 +55,6 @@ nav {
     color: var(--beige);
 }
 
-/* Ajustes para la lista de navegación */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px; /* Espaciado entre elementos */
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--beige);
-    font-weight: bold;
-}
-
-/* 📱 Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Cambia a formato vertical */
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .logo-container {
-        justify-content: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding-top: 10px;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-}
-
 /* Hero */
 .hero {
     background-color: var(--rojo-claro);
