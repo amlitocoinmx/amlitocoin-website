@@ -38,6 +38,51 @@ nav {
     z-index: 100;
 }
 
+/* Ocultar el menú en móviles */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--beige);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 📱 Responsividad para móviles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar el botón */
+    }
+
+    .nav-menu {
+        display: none; /* Ocultar el menú por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--rojo-oscuro);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    /* Mostrar menú cuando se activa */
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
 .logo-container {
     display: flex;
     align-items: center;
