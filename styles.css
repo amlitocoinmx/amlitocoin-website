@@ -1,4 +1,4 @@
-/* Paleta de colores */
+/* Variables */
 :root {
     --rojo-oscuro: #621132;
     --rojo-claro: #9D2449;
@@ -8,205 +8,203 @@
     --beige: #D4C19C;
     --blanco: #FFFFFF;
     --negro: #1a1a1a;
+    
+    --base-padding: 1.5rem;
+    --mobile-breakpoint: 768px;
+    --max-width: 1440px;
 }
 
-/* Reset */
-* {
+/* Reset mejorado */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--negro);
     color: var(--beige);
-    text-align: center;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Navbar */
+/* Navbar responsive */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--rojo-oscuro);
-    padding: 15px 20px;
+    padding: 1rem var(--base-padding);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    gap: 0.75rem;
 }
 
 .logo {
-    height: 40px;
-    margin-right: 10px;
+    height: clamp(2rem, 5vw, 2.5rem);
+    width: auto;
 }
 
 .brand-name {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 700;
     color: var(--beige);
 }
 
-nav ul {
-    list-style: none;
+.nav-menu {
     display: flex;
+    gap: 2rem;
+    list-style: none;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
+.nav-menu a {
     color: var(--beige);
-    font-weight: bold;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-/* Hero */
-.hero {
-    background-color: var(--rojo-claro);
-    padding: 100px 20px;
-    color: var(--blanco);
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3vw; /* Se adapta al tamaño de pantalla */
-}
-
-.hero span {
+.nav-menu a:hover {
     color: var(--dorado);
 }
 
-.cta-button {
-    background-color: var(--verde-medio);
-    color: var(--blanco);
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-    transition: background 0.3s;
-    font-size: 1.2rem;
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
-.cta-button:hover {
-    background-color: var(--verde-oscuro);
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--beige);
+    position: relative;
+    transition: background 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    transition: transform 0.3s;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(6px);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--rojo-claro);
+    padding: 7rem var(--base-padding) 3rem;
+    color: var(--blanco);
+    margin-top: 64px;
+}
+
+.hero-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
 }
 
 /* Secciones */
+.container {
+    flex: 1;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem var(--base-padding);
+}
+
 section {
-    padding: 60px 20px;
+    padding: clamp(2rem, 5vh, 4rem) 0;
     border-bottom: 2px solid var(--rojo-oscuro);
 }
 
-.details ul {
-    list-style: none;
-    padding: 0;
-}
-
-.details ul li {
-    background: var(--rojo-oscuro);
-    margin: 5px;
-    padding: 10px;
-    border-radius: 5px;
-}
-/* wallet */
-.wallet-img {
-    width: 150px;
-    height: auto;
-    margin-top: 20px;
-    transition: transform 0.3s;
-}
-
-.wallet-img:hover {
-    transform: scale(1.1);
-}
-/* Mascota */
+/* Imágenes responsivas */
+.wallet-img,
 .mascota-img {
-    width: 150px;
+    width: min(100%, 250px);
     height: auto;
-    margin-top: 20px;
-    transition: transform 0.3s;
+    margin: 1.5rem auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.mascota-img:hover {
-    transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-    background-color: var(--verde-oscuro);
-    padding: 20px;
-    color: var(--beige);
-}
-
-/* 📱 Media Queries para Responsividad */
-
-/* Dispositivos pequeños (móviles) */
+/* Media Queries */
 @media (max-width: 768px) {
-    nav {
+    .nav-menu {
+        position: fixed;
+        top: 64px;
+        right: -100%;
         flex-direction: column;
+        background: var(--rojo-oscuro);
+        width: 100%;
         text-align: center;
+        padding: 2rem 0;
+        transition: right 0.3s;
     }
 
-    nav ul {
-        flex-direction: column;
-        padding-top: 10px;
+    .nav-menu.active {
+        right: 0;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    .nav-toggle {
+        display: block;
     }
 
-    .hero h1 {
-        font-size: 5vw;
+    .nav-toggle.active .hamburger {
+        background: transparent;
     }
 
-    .cta-button {
-        font-size: 1rem;
-        padding: 8px 16px;
+    .nav-toggle.active .hamburger::before {
+        transform: rotate(45deg);
     }
 
-    .mascota-img {
-        width: 120px;
-    }
-}
-
-/* Dispositivos medianos (tabletas) */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 4vw;
+    .nav-toggle.active .hamburger::after {
+        transform: rotate(-45deg);
     }
 
-    .cta-button {
-        font-size: 1.1rem;
-    }
-
-    .mascota-img {
-        width: 130px;
-    }
-}
-
-/* Dispositivos grandes (pantallas anchas) */
-@media (min-width: 1200px) {
     .hero {
-        padding: 120px 20px;
+        padding-top: 5rem;
     }
+}
 
-    .hero h1 {
-        font-size: 2.5vw;
-    }
-
-    .cta-button {
-        font-size: 1.5rem;
+@media (min-width: 1200px) {
+    .container {
+        padding: 3rem var(--base-padding);
     }
 }
