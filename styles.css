@@ -27,7 +27,7 @@ body {
 /* Navbar */
 nav {
     display: flex;
-    justify-content: space-between; /* Espacia los elementos correctamente */
+    justify-content: space-between;
     align-items: center;
     background-color: var(--rojo-oscuro);
     padding: 15px 20px;
@@ -38,7 +38,6 @@ nav {
     z-index: 100;
 }
 
-/* Ajustar la distribución del logo y el texto */
 .logo-container {
     display: flex;
     align-items: center;
@@ -50,9 +49,24 @@ nav {
 }
 
 .brand-name {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--beige);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--beige);
+    font-weight: bold;
 }
 
 /* Hero */
