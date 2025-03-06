@@ -1,57 +1,61 @@
+/* styles.css */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
-    color: #333;
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+text-align: center;
+background-color: #f4f4f4;
+color: #333;
 }
 
 header {
-    background-color: #ffcc00;
-    padding: 20px;
+background-color: #9D2449;
+padding: 20px;
+color: white;
 }
 
 .logo {
-    max-width: 150px;
-    display: block;
-    margin: 0 auto 10px;
+max-width: 150px;
+display: block;
+margin: 0 auto 10px;
 }
 
 h1 span {
-    color: #d9534f;
-    font-weight: 700;
+color: #B38E5D;
+font-weight: 700;
 }
 
 section {
-    padding: 20px;
-    background: white;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+background: white;
+margin: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+list-style-type: none;
+padding: 0;
 }
 
 li {
-    margin: 10px 0;
+margin: 10px 0;
 }
 
 .mascota {
-    background-color: #ffeb99;
+background-color: #D4C19C;
+padding: 20px;
+border-radius: 10px;
 }
 
 .mascota-img {
-    max-width: 200px;
-    display: block;
-    margin: 0 auto;
+max-width: 200px;
+display: block;
+margin: 0 auto;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+background-color: #13322B;
+color: white;
+padding: 10px;
 }
