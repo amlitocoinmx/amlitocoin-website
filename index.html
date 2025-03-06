@@ -13,20 +13,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
+    <!-- Script -->
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active"); // Muestra u oculta el menú
+    });
+});
+    </script>
 
     <!-- Navbar -->
-    <nav>
-        <div class="logo-container">
-            <img src="amlitocoin.png" alt="AMLITOCOIN Logo" class="logo">
-            <span class="brand-name">AMLITOCOIN</span>
-        </div>
-        <ul>
-            <li><a href="#info">¿Qué es?</a></li>
-            <li><a href="#details">Tokenomics</a></li>
-            <li><a href="#wallet">Cómo Obtener</a></li>
-            <li><a href="#mascota">AMLITO</a></li>
-        </ul>
-    </nav>
+<nav>
+    <div class="logo-container">
+        <img src="amlitocoin.png" alt="AMLITOCOIN Logo" class="logo">
+        <span class="brand-name">AMLITOCOIN</span>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+    <ul class="nav-menu">
+        <li><a href="#que-es">¿Qué es?</a></li>
+        <li><a href="#token">Token</a></li>
+        <li><a href="#wallet">Wallet</a></li>
+    </ul>
+</nav>
 
     <!-- Hero Section -->
     <header class="hero">
