@@ -197,6 +197,48 @@ h2 {
     transform: scale(1.03);
 }
 
+/* wallet .css*/
+.wallet-link {
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.wallet-image {
+    border: 2px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wallet-link:hover .wallet-image {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(210, 173, 109, 0.3);
+    border-color: var(--dorado);
+}
+
+.wallet-link::after {
+    content: "➔";
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background: var(--dorado);
+    color: var(--rojo-oscuro);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wallet-link:hover::after {
+    opacity: 1;
+}
+
 /* footer.css */
 footer {
     background: var(--verde-oscuro);
