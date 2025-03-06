@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AMLITOCOIN - El primer token híbrido Serio-Meme basado en datos reales de México">
+    <title>¡No es corrupción, es AMLITOCOIN!</title>
+    
+    <!-- Metatags mejorados -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#621132">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar mejorado -->
+    <nav>
+        <div class="logo-container">
+            <img src="amlitocoin.png" 
+                 alt="AMLITOCOIN Logo" 
+                 class="logo"
+                 width="150"
+                 height="150"
+                 loading="lazy">
+            <span class="brand-name">AMLITOCOIN</span>
+        </div>
+        
+        <ul class="nav-list">
+            <li><a href="#info" class="nav-link">¿Qué es?</a></li>
+            <li><a href="#details" class="nav-link">Tokenomics</a></li>
+            <li><a href="#wallet" class="nav-link">Cómo Obtener</a></li>
+            <li><a href="#mascota" class="nav-link">AMLITO</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="section-container">
+            <h1>¡No es corrupción, es <span>AMLITOCOIN</span>!</h1>
+            <p class="mb-2">El token del pueblo, basado en datos reales y memes legendarios.</p>
+            <a href="#" class="cta-button">¡Compra AMLITOCOIN ahora!</a>
+        </div>
+    </header>
+
+    <!-- Sección Información -->
+    <section id="info" class="info">
+        <div class="section-container">
+            <h2>¿Qué es AMLITOCOIN?</h2>
+            <p>Una criptomoneda híbrida en Algorand que combina utilidad real con eventos virales. ¡Súmate a la revolución del blockchain del pueblo!</p>
+        </div>
+    </section>
+
+    <!-- Sección Detalles -->
+    <section id="details" class="details">
+        <div class="section-container">
+            <h2>Detalles del Token</h2>
+            <p class="mb-2">La cripto del pueblo, ¡hecha por el pueblo!</p>
+            
+            <div class="details-grid">
+                <div class="details-item">
+                    <strong>Nombre:</strong> AMLITOCOIN
+                </div>
+                <div class="details-item">
+                    <strong>Total Supply:</strong> 300,000,000 AMLITO
+                </div>
+                <div class="details-item">
+                    <strong>Blockchain:</strong> Algorand
+                </div>
+                <div class="details-item">
+                    <strong>ID del ASA:</strong> 123456789
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Obtener -->
+<section id="wallet" class="wallet">
+    <div class="section-container text-center">
+        <h2>Cómo Obtener AMLITOCOIN</h2>
+        <p class="mb-1">Solo necesitas una billetera compatible con Algorand. Recomendamos:</p>
+        
+        <a href="https://perawallet.app/" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="wallet-link"
+           aria-label="Descargar Pera Wallet">
+            
+            <img src="pera-wallet.png" 
+                 alt="Pera Wallet - Billetera oficial para Algorand" 
+                 class="responsive-image wallet-image"
+                 width="400"
+                 height="200"
+                 loading="lazy"
+                 sizes="(max-width: 600px) 480px,
+                        (max-width: 1200px) 800px,
+                        1200px">
+        </a>
+        
+        <p class="mt-1">Haz clic en la imagen para descargar Pera Wallet</p>
+    </div>
+</section>
+
+    <!-- AMLITO -->
+    <section id="mascota" class="mascota">
+        <div class="section-container text-center">
+            <h2>Conoce a AMLITO</h2>
+            <p class="mb-1">El alma del proyecto y el líder simbólico de esta revolución cripto.</p>
+            <img src="amlitocoin.png" 
+                 alt="AMLITO" 
+                 class="responsive-image"
+                 width="400"
+                 height="400"
+                 loading="lazy"
+                 sizes="(max-width: 600px) 480px,
+                        (max-width: 1200px) 800px,
+                        1200px">
+        </div>
+    </section>
+
+    <footer>
+        <div class="section-container">
+            <p>© 2025 Amlitocoin. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para menú móvil -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggle = document.createElement('button');
+        toggle.className = 'nav-toggle';
+        toggle.innerHTML = '☰';
+        const nav = document.querySelector('nav');
+        const menu = document.querySelector('.nav-list');
+        
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+        
+        nav.insertBefore(toggle, nav.querySelector('.logo-container').nextSibling);
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>
