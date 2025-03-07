@@ -194,7 +194,7 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-.responsive-image:hover {
+.responsive-image:hover .responsive-image2:hover {
     transform: scale(1.03);
 }
 
