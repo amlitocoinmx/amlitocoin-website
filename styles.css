@@ -184,7 +184,7 @@ h2 {
 }
 
 /* images.css */
-.responsive-image1 {
+.responsive-image {
     width: min(85%, 400px);
     height: auto;
     display: block;
@@ -194,7 +194,7 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-.responsive-image1:hover {
+.responsive-image:hover {
     transform: scale(1.03);
 }
 
