@@ -185,7 +185,7 @@ h2 {
 
 /* images.css */
 .responsive-image {
-    width: min(100%, 400px);
+    width: min(85%, 400px);
     height: auto;
     display: block;
     margin: 2rem auto;
@@ -214,30 +214,8 @@ h2 {
 
 .wallet-link:hover .wallet-image {
     transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(210, 173, 109, 0.3);
+    box-shadow: 0 8px 25px rgba(210, 173, 109, 0.3);
     border-color: var(--dorado);
-}
-
-.wallet-link::after {
-    content: "➔";
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    background: var(--dorado);
-    color: var(--rojo-oscuro);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.wallet-link:hover::after {
-    opacity: 1;
 }
 
 /* footer.css */
