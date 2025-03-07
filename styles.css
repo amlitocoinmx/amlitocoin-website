@@ -184,7 +184,7 @@ h2 {
 }
 
 /* images.css */
-.responsive-image {
+.responsive-image1 {
     width: min(85%, 400px);
     height: auto;
     display: block;
@@ -194,8 +194,17 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-.responsive-image:hover {
+.responsive-image1:hover {
     transform: scale(1.03);
+}
+
+.responsive-image2 {
+    width: min(85%, 400px);
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 /* wallet .css*/
