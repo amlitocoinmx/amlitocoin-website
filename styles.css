@@ -267,8 +267,8 @@ h2 {
 }
 
 .timeline-marker {
-    width: auto;
-    height: auto;
+    width: 25px;
+    height: 25px;
     background: var(--rojo-claro);
     border: 3px solid var(--dorado);
     border-radius: 50%;
