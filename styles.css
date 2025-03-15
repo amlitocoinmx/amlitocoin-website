@@ -142,6 +142,51 @@ nav {
     margin-right: auto;
 }
 
+/* Estilos */
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.1);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tokenomics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.token-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--dorado);
+}
+
+.token-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
 /* sections.css */
 section {
     padding: var(--padding-lg) var(--padding-sm);
@@ -245,83 +290,7 @@ h2 {
 }
 
 /* wallet .css*/
-.wallet-link {
-    display: inline-block;
-    position: relative;
-    transition: all 0.3s ease;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.wallet-image {
-    border: 2px solid transparent;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.wallet-link:hover .wallet-image {
-    transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(210, 173, 109, 0.3);
-    border-color: var(--dorado);
-}
-
-/* Sección Roadmap */
-.roadmap {
-    background: var(--verde-oscuro);
-    padding: var(--padding-lg) var(--padding-sm);
-}
-
-.timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 2rem auto;
-    padding-left: 2rem;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    height: 100%;
-    width: 4px;
-    background: var(--dorado);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-}
-
-.timeline-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.timeline-marker {
-    width: 25px;
-    height: 25px;
-    background: var(--rojo-claro);
-    border: 3px solid var(--dorado);
-    border-radius: 50%;
-}
-
-.timeline-content {
-    background: rgba(255,255,255,0.05);
-    padding: 1.5rem;
-    border-radius: 10px;
-    border: 1px solid var(--dorado);
-    margin-left: 2rem;
-}
-
-/* Sección Equipo */
-.equipo {
-    background: linear-gradient(to right, var(--rojo-oscuro), var(--verde-oscuro));
-    padding: var(--padding-lg) var(--padding-sm);
-}
-
-.equipo-grid {
+.pasos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -329,57 +298,399 @@ h2 {
     margin: 2rem auto;
 }
 
-.rol-card {
-    background: var(--negro);
+.paso-card {
+    background: rgba(255, 255, 255, 0.05);
     padding: 2rem;
     border-radius: 15px;
     border: 2px solid var(--dorado);
-    /* Opcional: Centrar el contenido dentro de la tarjeta */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    position: relative;
 }
 
-.contribuye {
+.paso-numero {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background: var(--rojo-claro);
+    color: var(--beige);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.paso-icon {
+    font-size: 2.5rem;
+    color: var(--dorado);
+    margin: 1rem 0;
+}
+
+/* Estilos para la sección AMLITO */
+/* Estructura principal */
+.amlito-section {
+    background: radial-gradient(circle at 10% 20%, #621132 0%, #1a1a1a 100%);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.amlito-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.amlito-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: rgba(255,255,255,0.05);
+    border: 2px solid #B38E5D;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+/* Efectos visuales */
+.amlito-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #B38E5D 0%, transparent 70%);
+    filter: blur(60px);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.amlito-character {
+    width: 100%;
+    max-width: 400px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+    transition: transform 0.3s ease;
+}
+
+/* Animaciones */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.icon-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #B38E5D;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+/* Texto y características */
+.amlito-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.amlito-gold {
+    color: #B38E5D;
+    text-shadow: 0 0 15px rgba(179,142,93,0.5);
+}
+
+.amlito-feature {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.amlito-feature:hover {
+    transform: translateX(10px);
+    background: rgba(179,142,93,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .amlito-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .amlito-character {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
+
+/* Casos de Uso Mejorados */
+.casos {
+    background: var(--verde-oscuro);
+    position: relative;
+    overflow: hidden;
+}
+
+.casos:before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: var(--dorado);
+    opacity: 0.1;
+    border-radius: 50%;
+}
+
+.section-subtitle {
+    color: var(--beige);
+    opacity: 0.9;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.casos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.caso-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--dorado);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.caso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(210, 173, 109, 0.2);
+}
+
+.caso-icon {
+    font-size: 2.5rem;
+    color: var(--dorado);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.caso-card:hover .caso-icon {
+    transform: scale(1.1);
+}
+
+.caso-card h3 {
+    color: var(--beige);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.caso-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.caso-tag {
+    display: inline-block;
+    background: var(--rojo-oscuro);
+    color: var(--beige);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Sección Roadmap */
+.roadmap {
+    background: var(--rojo-oscuro);
+    position: relative;
+    padding: 4rem 0;
+}
+
+.timeline-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: var(--dorado);
+    transform: translateX(-50%);
+}
+
+.phase-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--dorado);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    width: 45%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.phase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(210, 173, 109, 0.2);
+}
+
+.phase-card.left {
+    left: 0;
+}
+
+.phase-card.right {
+    left: 55%;
+}
+
+.phase-marker {
+    width: 20px;
+    height: 20px;
+    background: var(--dorado);
+    border: 3px solid var(--rojo-claro);
+    border-radius: 50%;
+    position: absolute;
+    left: -38px;
+    top: 25px;
+}
+
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.phase-icon {
+    font-size: 1.5rem;
+    color: var(--dorado);
+}
+
+.phase-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.phase-content li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.phase-content i {
+    color: var(--dorado);
+    min-width: 20px;
+}
+
+.phase-tag {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--verde-medio);
+    color: var(--beige);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.phase-tag.coming-soon {
+    background: var(--rojo-claro);
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+    }
+    
+    .phase-card {
+        width: 85%;
+        left: 30px !important;
+    }
+    
+    .phase-marker {
+        left: -32px;
+    }
+}
+
+/* Sección Equipo */
+.equipo {
+    background: linear-gradient(to right, var(--verde-oscuro), var(--rojo-oscuro));
+    padding: 4rem 0;
+}
+
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+.rol-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--dorado);
+    transition: all 0.3s ease;
+}
+
+.rol-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(210, 173, 109, 0.3);
+}
+
+.rol-icon {
+    font-size: 2.5rem;
+    color: var(--dorado);
+    margin-bottom: 1rem;
+}
+
+.rol-desc {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.rol-desc li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rol-desc li:before {
+    content: "▹";
+    color: var(--dorado);
+}
+
+.otros-talentos {
     margin-top: 3rem;
     padding: 2rem;
     background: rgba(255,255,255,0.1);
     border-radius: 15px;
 }
 
-.rol-card h3 {
-    margin-bottom: 0.75rem;
-}
-
-.rol-card p {
-    margin-bottom: 1.25rem;
-}
-
-.rol-card .cta-button {
-    /* Añade un margen superior para separarlo del texto */
-    margin-top: 1rem;
-    /* Opcional: Si quieres centrar horizontalmente el botón */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (max-width: 768px) {
-    .timeline {
-        padding-left: 1rem;
-    }
-    
-    .timeline::before {
-        left: 10px;
-    }
-    
-    .timeline-marker {
-        left: -28px;
-    }
-    
-    .timeline-content {
-        margin-left: 1rem;
-    }
+.cta-button.outline {
+    background: transparent;
+    border: 2px solid var(--dorado);
 }
 
 /* footer.css */
@@ -393,6 +704,25 @@ footer {
 footer p {
     font-size: clamp(0.875rem, 2vw, 1rem);
     opacity: 0.9;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+    color: var(--beige);
+    font-size: 1.75rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--dorado);
+    transform: translateY(-2px);
 }
 
 /* media-queries.css */
@@ -440,6 +770,15 @@ footer p {
     }
 }
 
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 1rem;
+    }
+    
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+}
 /* utilities.css */
 .cta-button {
     display: inline-block;
