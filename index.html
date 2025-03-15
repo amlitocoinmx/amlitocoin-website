@@ -12,6 +12,10 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#621132">
     
+    <!-- favicon.ico -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     
@@ -38,7 +42,7 @@
             <li><a href="#casos" class="nav-link">Casos de Uso</a></li>
             <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
             <li><a href="#wallet" class="nav-link">Cómo Obtener</a></li>
-            <li><a href="#mascota" class="nav-link">AMLITO</a></li>
+            <li><a href="#amlito-hero" class="nav-link">AMLITO</a></li>
             <li><a href="#equipo" class="nav-link">Únete al Equipo</a></li>
         </ul>
     </nav>
@@ -47,8 +51,25 @@
     <header class="hero">
         <div class="section-container">
             <h1>¡No es corrupción, es <span>AMLITOCOIN</span>!</h1>
-            <p class="mb-2">El token del pueblo, basado en datos reales y memes legendarios.</p>
+            <p class="hero-subtitle">El token del pueblo, basado en datos reales y memes legendarios</p>
             <a href="https://t.me/Amlitos" class="cta-button" target="_blank">¡Adquiere AMLITOCOIN ahora!</a>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <span class="stat-number">128M+</span>
+                        <span class="stat-label">Mexicanos representados</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-coins"></i>
+                    <div>
+                        <span class="stat-number">300M</span>
+                        <span class="stat-label">Supply Total</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -56,197 +77,419 @@
     <section id="info" class="info">
         <div class="section-container">
             <h2>¿Qué es AMLITOCOIN?</h2>
-            <p>AMLITOCOIN es una criptomoneda híbrida construida en la blockchain de Algorand. Combina utilidad real con eventos virales y se adapta al crecimiento poblacional de México.<br>¡Súmate a la revolución del blockchain del pueblo!</p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-dna"></i>
+                    <h3>Token Híbrido Único</h3>
+                    <p>Combina utilidad real con viralidad memética en la blockchain de <strong>Algorand</strong></p>
+                </div>
+                
+                <div class="info-card highlight">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Adaptación Demográfica</h3>
+                    <p>Modelo tokenómico que escala con el crecimiento poblacional de México</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Revolución Descentralizada</h3>
+                    <p>Empoderamiento financiero mediante tecnología blockchain de última generación</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Sección Detalles -->
     <section id="details" class="details">
         <div class="section-container">
-            <h2>Detalles del Token</h2>
-            <p class="mb-2">La cripto del pueblo, ¡hecha por el pueblo!</p>
+            <h2>Tokenomics Transparentes</h2>
+            <p class="section-subtitle">La cripto del pueblo, hecha por el pueblo</p>
             
-            <div class="details-grid">
-                <div class="details-item">
-                    <strong>Nombre:</strong> AMLITOCOIN
+            <div class="tokenomics-grid">
+                <div class="token-card">
+                    <div class="token-header">
+                        <i class="fas fa-coin"></i>
+                        <h3>Especificaciones Técnicas</h3>
+                    </div>
+                    <ul class="token-details">
+                        <li><strong>Blockchain:</strong> Algorand (ASA)</li>
+                        <li><strong>Asset ID:</strong> 735367210</li>
+                        <li><strong>Total Supply:</strong> 300,000,000 AMLITO</li>
+                    </ul>
                 </div>
-                <div class="details-item">
-                    <strong>Total Supply:</strong> 300,000,000 AMLITO
-                </div>
-                <div class="details-item">
-                    <strong>Blockchain:</strong> Algorand
-                </div>
-                <div class="details-id">
-                    <a href="https://testnet.algo.surf/asset/735367210/transactions" target="_blank" class="id-button"><strong >ID del ASA:</strong>735367210</a>
+                
+                <div class="token-card">
+                    <div class="token-header">
+                        <i class="fas fa-lock"></i>
+                        <h3>Seguridad Garantizada</h3>
+                    </div>
+                    <ul class="token-details">
+                        <li><strong>Freeze Address:</strong> Habilitado</li>
+                        <li><strong>Clawback:</strong> Auditoría trimestral</li>
+                        <li><strong>Governance:</strong> Modelo DAO</li>
+                    </ul>
                 </div>
             </div>
+            
+            <a href="https://testnet.explorer.perawallet.app/asset/735367210" 
+               class="cta-button outline"
+               target="_blank">
+                <i class="fas fa-chart-bar"></i> Ver Estadísticas en Vivo
+            </a>
         </div>
     </section>
 
     <!-- Sección Casos de Uso -->
-  <section id="casos" class="casos">
-    <div class="section-container">
-        <h2>Casos de Uso</h2>
-        <p>AMLITOCOIN se utiliza en múltiples ámbitos:</p>
-        <ul>
-            <li><strong>Pagos y Remesas:</strong> Transferencias rápidas y económicas sin intermediarios.</li>
-            <li><strong>Identidad Digital y NFTs:</strong> Registro seguro y descentralizado para votaciones y servicios gubernamentales.</li>
-            <li><strong>Programas Sociales:</strong> Distribución transparente de subsidios y ayudas.</li>
-            <li><strong>Turismo y Comercio:</strong> Incentivos para negocios y viajeros.</li>
-            <li><strong>Reserva de Valor:</strong> Un mecanismo deflacionario que protege contra la inflación.</li>
-        </ul>
-    </div>
-</section>
-
-    <!-- Sección Roadmap -->
-    <section id="roadmap" class="roadmap">
+    <section id="casos" class="casos">
         <div class="section-container">
-            <h2>Roadmap 2025-2026</h2>
-            <div class="timeline">
-                <!-- Fase 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3>Q1 2025 - Fase 1: Lanzamiento TestNet</h3>
-                        <div class="timeline-marker"></div>
+            <h2>Casos de Uso</h2>
+            <p class="section-subtitle">AMLITOCOIN revoluciona múltiples sectores</p>
+            
+            <div class="casos-grid">
+                <!-- Tarjeta 1 -->
+                <div class="caso-card">
+                    <div class="caso-icon">
+                        <i class="fas fa-money-bill-transfer"></i>
                     </div>
-                    <div class="timeline-content">
-                        <ul>
-                            <li>✅ Creación del token en TestNet</li>
-                            <li>✅ Pruebas de Opt-In, Transferencias, Freeze y Clawback</li>
-                            <li>✅ Simulación de Emisión y Quema con datos reales</li>
-                        </ul>
-                    </div>
+                    <h3>Pagos y Remesas</h3>
+                    <p>Transferencias rápidas y económicas sin intermediarios</p>
+                    <div class="caso-tag">#FinanzasPopulares</div>
                 </div>
-                
-                <!-- Fase 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3>Q2 2025 - Fase 2: MainNet &amp; Airdrop</h3>
-                        <div class="timeline-marker"></div>
+    
+                <!-- Tarjeta 2 -->
+                <div class="caso-card">
+                    <div class="caso-icon">
+                        <i class="fas fa-id-card"></i>
                     </div>
-                    <div class="timeline-content">
-                        <ul>
-                            <li>Migración a MainNet</li>
-                            <li>AirDrop inicial equivalente al número total de habitantes en México</li>
-                            <li>Lanzamiento NFTs de identidad</li>
-                        </ul>
-                    </div>
+                    <h3>Identidad Digital</h3>
+                    <p>NFTs para votaciones y servicios gubernamentales seguros</p>
+                    <div class="caso-tag">#TecnologíaSocial</div>
                 </div>
-
-                <!-- Fase 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3>Q3 2025 - Fase 3: Adopción Comercial</h3>
-                        <div class="timeline-marker"></div>
+    
+                <!-- Tarjeta 3 -->
+                <div class="caso-card">
+                    <div class="caso-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
                     </div>
-                    <div class="timeline-content">
-                        <ul>
-                            <li>Pagos en comercios asociados</li>
-                            <li>Integración con sector turismo</li>
-                            <li>Sistema de remesas AMLITO</li>
-                        </ul>
-                    </div>
+                    <h3>Programas Sociales</h3>
+                    <p>Distribución transparente de subsidios y ayudas</p>
+                    <div class="caso-tag">#Transparencia</div>
                 </div>
-
-                <!-- Fase 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3>Q4 2025 - Fase 4: Expansión Global</h3>
-                        <div class="timeline-marker"></div>
+    
+                <!-- Tarjeta 4 -->
+                <div class="caso-card">
+                    <div class="caso-icon">
+                        <i class="fas fa-route"></i>
                     </div>
-                    <div class="timeline-content">
-                        <ul>
-                            <li>Campañas virales en redes</li>
-                            <li>Listado en exchanges globales</li>
-                            <li>Expansión a Latinoamérica</li>
-                        </ul>
+                    <h3>Turismo y Comercio</h3>
+                    <p>Incentivos para negocios y viajeros internacionales</p>
+                    <div class="caso-tag">#EconomíaLocal</div>
+                </div>
+    
+                <!-- Tarjeta 5 -->
+                <div class="caso-card">
+                    <div class="caso-icon">
+                        <i class="fas fa-shield-halved"></i>
                     </div>
+                    <h3>Reserva de Valor</h3>
+                    <p>Mecanismo deflacionario contra la inflación</p>
+                    <div class="caso-tag">#ProtecciónFinanciera</div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Sección Roadmap -->
+<section id="roadmap" class="roadmap">
+    <div class="section-container">
+        <h2>Roadmap 2025-2026</h2>
+        <p class="section-subtitle">La ruta hacia la revolución financiera</p>
+        
+        <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+            
+            <!-- Fase 1 -->
+            <div class="phase-card left">
+                <div class="phase-header">
+                    <div class="phase-marker"></div>
+                    <h3>Q1 2025 - Fase 1: Lanzamiento TestNet</h3>
+                    <div class="phase-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                </div>
+                <div class="phase-content">
+                    <ul>
+                        <li><i class="fas fa-rocket"></i> Creación del token en TestNet</li>
+                        <li><i class="fas fa-check-double"></i> Pruebas de Opt-In, Transferencias, Freeze y Clawback</li>
+                        <li><i class="fas fa-chart-line"></i> Simulación de Emisión y Quema con datos reales</li>
+                    </ul>
+                    <div class="phase-tag">En Progreso</div>
+                </div>
+            </div>
+
+            <!-- Fase 2 -->
+            <div class="phase-card right">
+                <div class="phase-header">
+                    <div class="phase-marker"></div>
+                    <h3>Q2 2025 - Fase 2: MainNet & Airdrop</h3>
+                    <div class="phase-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                </div>
+                <div class="phase-content">
+                    <ul>
+                        <li><i class="fas fa-network-wired"></i> Migración a MainNet</li>
+                        <li><i class="fas fa-parachute-box"></i> AirDrop equivalente a la población mexicana</li>
+                        <li><i class="fas fa-passport"></i> Lanzamiento de NFTs de identidad</li>
+                    </ul>
+                    <div class="phase-tag coming-soon">Próximamente</div>
+                </div>
+            </div>
+
+            <!-- Fase 3 -->
+            <div class="phase-card left">
+                <div class="phase-header">
+                    <div class="phase-marker"></div>
+                    <h3>Q3 2025 - Fase 3: Adopción Comercial</h3>
+                    <div class="phase-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                </div>
+                <div class="phase-content">
+                    <ul>
+                        <li><i class="fas fa-cash-register"></i> Pagos en comercios asociados</li>
+                        <li><i class="fas fa-suitcase-rolling"></i> Integración con sector turismo</li>
+                        <li><i class="fas fa-money-bill-wave"></i> Sistema de remesas AMLITO</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Fase 4 -->
+            <div class="phase-card right">
+                <div class="phase-header">
+                    <div class="phase-marker"></div>
+                    <h3>Q4 2025 - Fase 4: Expansión Global</h3>
+                    <div class="phase-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                </div>
+                <div class="phase-content">
+                    <ul>
+                        <li><i class="fas fa-virus"></i> Campañas virales en redes</li>
+                        <li><i class="fas fa-exchange-alt"></i> Listado en exchanges globales</li>
+                        <li><i class="fas fa-flag"></i> Expansión a Latinoamérica</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Sección Cómo Obtener -->
     <section id="wallet" class="wallet">
         <div class="section-container text-center">
-            <h2>Cómo Obtener AMLITOCOIN</h2>
-            <p class="mb-1">Descarga Pera Wallet y sigue las instrucciones para recibir AMLITOCOIN en tu billetera compatible con Algorand.</p>
+            <h2>Adquiere AMLITOCOIN en 3 Pasos</h2>
+            <p class="section-subtitle">La criptomoneda del pueblo, accesible para todos</p>
             
+            <div class="pasos-grid">
+                <!-- Paso 1 -->
+                <div class="paso-card">
+                    <div class="paso-numero">1</div>
+                    <i class="fas fa-download paso-icon"></i>
+                    <h3>Descarga Pera Wallet</h3>
+                    <p>Disponible para iOS y Android</p>
+                </div>
+    
+                <!-- Paso 2 -->
+                <div class="paso-card">
+                    <div class="paso-numero">2</div>
+                    <i class="fas fa-wallet paso-icon"></i>
+                    <h3>Configura tu Billetera</h3>
+                    <p>Añade AMLITOCOIN (ASA ID: 735367210)</p>
+                </div>
+    
+                <!-- Paso 3 -->
+                <div class="paso-card">
+                    <div class="paso-numero">3</div>
+                    <i class="fas fa-coins paso-icon"></i>
+                    <h3>¡Recibe tus AMLITO!</h3>
+                    <p>Vía Airdrop o compra directa</p>
+                </div>
+            </div>
+    
             <a href="https://perawallet.app/" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="wallet-link"
-               aria-label="Descargar Pera Wallet">
-                
-                <img src="pera-wallet.png" 
-                     alt="Pera Wallet - Billetera oficial para Algorand" 
-                     class="responsive-image wallet-image"
-                     width="400"
-                     height="200"
-                     loading="lazy"
-                     sizes="(max-width: 600px) 480px,
-                            (max-width: 1200px) 800px,
-                            1200px">
+               class="cta-button"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i> Descargar Pera Wallet
             </a>
-            
-            <p class="mt-1">Haz clic en la imagen para descargar Pera Wallet</p>
         </div>
     </section>
 
     <!-- Sección AMLITO -->
-    <section id="mascota" class="mascota">
-        <div class="section-container text-center">
-            <h2>Conoce a AMLITO</h2>
-            <p class="mb-1">El alma y símbolo del proyecto: un líder carismático que representa la revolución cripto en México.</p>
-            <img src="amlito.png" 
-                 alt="AMLITO" 
-                 class="amlito-image"
-                 width="400"
-                 height="400"
-                 loading="lazy"
-                 sizes="(max-width: 600px) 480px,
-                        (max-width: 1200px) 800px,
-                        1200px">
-        </div>
-    </section>
+    <section id="amlito-hero" class="amlito-section">
+        <div class="amlito-container">
+            <!-- Tarjeta principal -->
+            <div class="amlito-card">
+                <!-- Sección izquierda - Imagen -->
+                <div class="amlito-image-wrapper">
+                    <img src="amlito.png" 
+                         alt="AMLITO liderando la revolución" 
+                         class="amlito-character"
+                         loading="lazy">
+                    <div class="amlito-glow"></div>
+                </div>
     
-    <!-- Sección Equipo -->
-    <section id="equipo" class="equipo">
-        <div class="section-container text-center">
-            <h2>¡Únete a la Revolución!</h2>
-            <p class="mb-2">Buscamos desarrolladores, creadores y fanáticos de las cripto. Solo por el puro gusto de hacer memes.<br>¿Te apuntas a construir el futuro con nosotros?</p>
-            
-            <div class="equipo-grid">                
-                <div class="rol-card">
-                    <h3>Community Managers</h3>
-                    <p>Manejo de redes sociales y creación de memes</p>
-                    <a href="https://t.me/Amlito_Community" class="cta-button" target="_blank">Unirse a Telegram</a>
-                </div>
-
-                <div class="rol-card">
-                    <h3>Desarrolladores Algorand</h3>
-                    <p>Experiencia en Smart Contracts, Python, JavaScript y más</p>
-                    <a href="https://t.me/Amlito_Desarrolladores" class="cta-button" target="_blank">Aplicar</a>
-                </div>
-
-                <div class="rol-card">
-                    <h3>Diseñadores Gráficos</h3>
-                    <p>Crea NFTs y material visual para impulsar la identidad de AMLITOCOIN</p>
-                    <a href="https://t.me/Amlito_Graficos" class="cta-button" target="_blank">Enviar Portfolio</a>
+                <!-- Sección derecha - Contenido -->
+                <div class="amlito-content">
+                    <h2 class="amlito-title">
+                        <span class="amlito-gold">AMLITO</span>: El Héroe 
+                        <div class="amlito-subtitle">de la Revolución Financiera</div>
+                    </h2>
+    
+                    <!-- Lista de características con iconos animados -->
+                    <div class="amlito-features">
+                        <!-- Característica 1 -->
+                        <div class="amlito-feature">
+                            <div class="amlito-icon">
+                                <i class="fas fa-fire"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="amlito-feature-text">
+                                <h3>Lucha contra la inflación</h3>
+                                <p>Mecanismo deflacionario que protege tu poder adquisitivo</p>
+                            </div>
+                        </div>
+    
+                        <!-- Característica 2 -->
+                        <div class="amlito-feature">
+                            <div class="amlito-icon">
+                                <i class="fas fa-users"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="amlito-feature-text">
+                                <h3>Poder del pueblo</h3>
+                                <p>Gobernanza comunitaria y toma de decisiones descentralizadas</p>
+                            </div>
+                        </div>
+    
+                        <!-- Característica 3 -->
+                        <div class="amlito-feature">
+                            <div class="amlito-icon">
+                                <i class="fas fa-bolt"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="amlito-feature-text">
+                                <h3>Innovación Crypto</h3>
+                                <p>Tecnología blockchain de última generación en Algorand</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Estadísticas impactantes -->
+                    <div class="amlito-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">128M+</div>
+                            <div class="stat-label">Mexicanos protegidos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">$0%</div>
+                            <div class="stat-label">Tasa de corrupción</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="contribuye">
-                <h3>¿Tienes otras habilidades?</h3>
-                <p>Envíanos tu propuesta</p>
+    
+            <!-- Efecto de slogan flotante -->
+            <div class="amlito-slogan">
+                <span>¡No es corrupción, es revolución!</span>
             </div>
         </div>
     </section>
+
+    <!-- Sección Equipo -->
+<section id="equipo" class="equipo">
+    <div class="section-container text-center">
+        <h2>¡Únete a la Revolución Cripto!</h2>
+        <p class="section-subtitle">Buscamos talentos apasionados por blockchain y memes</p>
+        
+        <div class="roles-grid">
+            <!-- Tarjeta 1: Community Managers -->
+            <div class="rol-card">
+                <div class="rol-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Community Managers</h3>
+                <ul class="rol-desc">
+                    <li>Gestión de redes sociales</li>
+                    <li>Creación de memes virales</li>
+                    <li>Interacción con la comunidad</li>
+                </ul>
+                <a href="https://t.me/Amlito_Community" class="cta-button" target="_blank">
+                    <i class="fab fa-telegram"></i> Unirse al Grupo
+                </a>
+            </div>
+
+            <!-- Tarjeta 2: Desarrolladores -->
+            <div class="rol-card highlight">
+                <div class="rol-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Desarrolladores Algorand</h3>
+                <ul class="rol-desc">
+                    <li>Smart Contracts</li>
+                    <li>Python/JavaScript</li>
+                    <li>Integración blockchain</li>
+                </ul>
+                <a href="https://t.me/Amlito_Desarrolladores" class="cta-button" target="_blank">
+                    <i class="fas fa-laptop-code"></i> Aplicar Ahora
+                </a>
+            </div>
+
+            <!-- Tarjeta 3: Diseñadores -->
+            <div class="rol-card">
+                <div class="rol-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Diseñadores Gráficos</h3>
+                <ul class="rol-desc">
+                    <li>Creación de NFTs</li>
+                    <li>Identidad visual AMLITOCOIN</li>
+                    <li>Material promocional</li>
+                </ul>
+                <a href="https://t.me/Amlito_Graficos" class="cta-button" target="_blank">
+                    <i class="fas fa-file-upload"></i> Enviar Portfolio
+                </a>
+            </div>
+        </div>
+
+        <!-- Sección para otros talentos -->
+        <div class="otros-talentos">
+            <h3>¿Tienes otras habilidades?</h3>
+            <p>¡También nos interesan!</p>
+            <a href="mailto:talentos@amlitocoin.com" class="cta-button outline">
+                <i class="fas fa-envelope"></i> Enviar Propuesta
+            </a>
+        </div>
+    </div>
+</section>
 
     <footer>
+    <!-- Sección de redes sociales -->
         <div class="section-container">
+            <div class="social-icons">
+                <a href="https://x.com/AmlitoCoinMx" target="_blank" aria-label="X">
+                    <i class="fab fa-x"></i>
+                </a>
+                <a href="https://github.com/Amlitocoin" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://t.me/Amlitos" target="_blank" aria-label="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
+            
             <p>© 2025 Amlitocoin. Todos los derechos reservados.</p>
-        </div>
     </footer>
 
     <!-- Script para menú móvil -->
