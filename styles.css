@@ -790,6 +790,42 @@ footer p {
     opacity: 0.9;
 }
 
+/* Sección Whitepaper */
+.whitepaper {
+    background: var(--negro);
+    padding: var(--padding-lg) var(--padding-sm);
+    text-align: center;
+}
+
+.whitepaper h2 {
+    color: var(--dorado);
+    margin-bottom: 1rem;
+}
+
+.whitepaper p {
+    font-size: 1.1rem;
+    color: var(--beige);
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.whitepaper .cta-button {
+    background: linear-gradient(to right, var(--rojo-claro), var(--rojo-oscuro));
+    color: var(--blanco);
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--dorado);
+}
+
+.whitepaper .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 /* Social Icons */
 .social-icons {
     display: flex;
