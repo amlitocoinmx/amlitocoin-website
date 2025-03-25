@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AMLITOCOIN DApp - Opt-In</title>
+  <!-- Algorand SDK -->
+  <script src="https://unpkg.com/algosdk/dist/algosdk.min.js"></script>
+  <!-- Pera Wallet Connect SDK -->
+  <script src="https://unpkg.com/@perawallet/connect"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    button { padding: 10px 20px; font-size: 16px; margin-right: 10px; }
+    #output { margin-top: 20px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido a AMLITOCOIN DApp</h1>
+  <p>Conecta tu billetera y realiza el Opt-In de AMLITOCOIN.</p>
+  <button id="connectBtn">Conectar Billetera</button>
+  <button id="optInBtn" disabled>Realizar Opt-In</button>
+  <div id="output"></div>
+  
+  <script>
+    // Configuración de Algod para TestNet
+    const ALGOD_TOKEN = "";
+    const ALGOD_ADDRESS = "https://testnet-api.algonode.cloud";
+    // Asset ID de AMLITOCOIN (reemplaza con el real)
+    const AMLITO_ASSET_ID = 735367210; 
+
+    let accountAddress = null;
+    let algodClient = new algosdk.Algodv2(ALGOD_TOKEN, ALGOD_ADDRESS);
+    let peraWallet = new PeraWalletConnect();
+
+    // Función para conectar con Pera Wallet
+    async function connectWallet() {
+      try {
+        const accounts = await peraWallet.connect();
+        accountAddress = accounts[0];
+        document.getElementById("output").innerText = "Cuenta conectada: " + accountAddress;
+        document.getElementById("optInBtn").disabled = false;
+      } catch (error) {
+        console.error("Error al conectar la billetera:", error);
+        document.getElementById("output").innerText = "Error al conectar la billetera.";
+      }
+    }
+    
+    // Función para realizar el opt-in
+    async function optIn() {
+      if (!accountAddress) {
+        alert("Primero conecta tu billetera.");
+        return;
+      }
+      try {
+        // Obtener parámetros sugeridos
+        let params = await algodClient.getTransactionParams().do();
+        // Construir una transacción de opt-in (envío de 0 tokens a uno mismo)
+        let optInTxn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+          from: accountAddress,
+          to: accountAddress,
+          assetIndex: AMLITO_ASSET_ID,
+          amount: 0,
+          suggestedParams: params
+        });
+        // Convertir la transacción no firmada a Base64
+        let txn_b64 = algosdk.encodeUnsignedTransaction(optInTxn).toString("base64");
+        // Solicitar a la billetera que firme la transacción
+        const signedTxns = await peraWallet.signTransaction([txn_b64]);
+        // Enviar la transacción firmada
+        let tx = await algodClient.sendRawTransaction(signedTxns[0]).do();
+        document.getElementById("output").innerText += "\nOpt-In realizado. TX ID: " + tx.txId;
+      } catch (error) {
+        console.error("Error en el opt-in:", error);
+        document.getElementById("output").innerText += "\nError en el opt-in: " + error;
+      }
+    }
+    
+    // Asignar eventos a los botones
+    document.getElementById("connectBtn").addEventListener("click", connectWallet);
+    document.getElementById("optInBtn").addEventListener("click", optIn);
+  </script>
+</body>
+</html>
