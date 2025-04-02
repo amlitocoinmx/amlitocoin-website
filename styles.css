@@ -698,6 +698,10 @@ h2 {
     background: var(--rojo-claro);
 }
 
+.phase-tag.done {
+    background: var(--negro);
+}
+
 @media (max-width: 768px) {
     .timeline-line {
         left: 20px;
