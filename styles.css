@@ -776,6 +776,10 @@ h2 {
     border-radius: 15px;
 }
 
+.otros-talentos p {
+    margin-bottom: 20px;
+}
+
 .cta-button.outline {
     background: transparent;
     border: 2px solid var(--dorado);
