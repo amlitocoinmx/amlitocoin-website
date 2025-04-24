@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Whitepaper AMLITOCOIN</title>
+<style>
+/* --- Estilos Base Mejorados --- */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Arial:wght@400;700&display=swap');
+    
+:root {
+--primary-color: #660000;
+--secondary-color: #434343;
+--text-color: #333333;
+--bg-color: #ffffff;
+}
+    
+body {
+font-family: "Arial", sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--bg-color);
+margin: 0;
+padding: 20px;
+max-width: 1200px;
+margin: 0 auto;
+}
+    
+/* --- Tipografía Mejorada --- */
+h1, h2, h3, h4, h5, h6 {
+font-family: "Comfortaa", sans-serif;
+color: var(--primary-color);
+margin-top: 1.5em;
+margin-bottom: 0.5em;
+line-height: 1.3;
+}
+    
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.5rem; }
+    
+p, li {
+font-size: 1rem;
+margin-bottom: 1em;
+}
+    
+a {
+color: var(--primary-color);
+text-decoration: underline;
+}
+    
+/* --- Tablas Responsivas --- */
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 20px 0;
+overflow-x: auto;
+display: block;
+}
+    
+th, td {
+border: 1px solid #ddd;
+padding: 12px;
+text-align: left;
+}
+    
+th {
+background-color: var(--primary-color);
+color: white;
+}
+    
+/* --- Listas Mejoradas --- */
+ul, ol {
+padding-left: 1.5em;
+margin-bottom: 1.5em;
+}
+    
+li {
+margin-bottom: 0.5em;
+}
+    
+/* --- Mejoras para Móviles --- */
+@media (max-width: 768px) {
+body {
+padding: 15px;
+font-size: 14px;
+}
+        
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.3rem; }
+        
+img {
+max-width: 100% !important;
+height: auto !important;
+}
+}
+    
+/* --- Estilos para Impresión --- */
+@media print {
+body {
+font-size: 12pt;
+line-height: 1.5;
+margin: 1cm;
+color: #000;
+}
+        
+a {
+color: #000;
+text-decoration: none;
+}
+            
+h1, h2, h3 {
+page-break-after: avoid;
+}
+        
+table {
+page-break-inside: avoid;
+}
+        
+img {
+max-width: 80% !important;
+}
+}
+    
+/* --- Estilos Originales (modificados) --- */
+.title {
+font-size: 2.5rem;
+text-align: center;
+margin-bottom: 10px;
+color: var(--primary-color);
+}
+    
+.subtitle {
+font-size: 1.2rem;
+text-align: center;
+margin-bottom: 30px;
+color: var(--secondary-color);
+}
+    
+.logo-container {
+text-align: center;
+margin: 20px 0;
+}
+    
+.logo-container img {
+max-width: 200px;
+height: auto;
+}
+</style>
+</head>
+<body>
+<!-- Logo y Título -->
+<div class="logo-container">
+<img src="amlitocoin.png" alt="Logo de AMLITOCOIN - La cripto del pueblo" width="200">
+</div>
+<h1 class="title">Whitepaper: AMLITOCOIN</h1>
+<p class="subtitle">La Cripto del Pueblo, Hecha por el Pueblo</p>
+
+<h1>Resumen Ejecutivo</h1>
+
+<p>AMLITOCOIN es un token h&iacute;brido basado en Algorand que combina la solidez de una criptomoneda de utilidad con el potencial viral de un memecoin. 
+Inspirado en la identidad y la cultura mexicana, AMLITOCOIN utiliza datos reales de crecimiento poblacional (natalidad y mortalidad) para regular su oferta 
+mediante mecanismos autom&aacute;ticos de emisi&oacute;n y quema. El proyecto se orienta a facilitar pagos, remesas, identidad digital y programas sociales, 
+al mismo tiempo que busca convertirse en un s&iacute;mbolo de innovaci&oacute;n, participaci&oacute;n ciudadana y transparencia.</p>
+
+<h2>1. Introducci&oacute;n</h2>
+<p>La transformaci&oacute;n digital y la adopci&oacute;n de tecnolog&iacute;as blockchain abren nuevas posibilidades para la inclusi&oacute;n financiera y la gobernanza 
+descentralizada. AMLITOCOIN surge como respuesta a la necesidad de un token que:</p>
+<ul>
+<li>Incorpore datos reales:</li>
+</ul>
+<p>Utiliza indicadores demogr&aacute;ficos oficiales (INEGI) para ajustar su oferta.</p>
+<ul>
+<li>Impulsado por la comunidad:</li>
+</ul>
+<p>Basado en la visi&oacute;n del &quot;token del pueblo&quot;, donde cada mexicano forma parte del cambio.</p>
+<ul>
+<li>Funcional y viral:</li>
+</ul>
+<p>Combina aplicaciones reales en pagos, identidad digital y programas sociales con una estrategia de marketing mem&eacute;tica.</p>
+
+<h2>2. Visi&oacute;n y Misi&oacute;n</h2>
+<p>Visi&oacute;n</p>
+<p>Convertir a AMLITOCOIN en la criptomoneda l&iacute;der en M&eacute;xico y Latinoam&eacute;rica, impulsando una revoluci&oacute;n financiera inclusiva y transparente, 
+respaldada por tecnolog&iacute;a de vanguardia y el poder de la comunidad.</p>
+
+<p>Misi&oacute;n</p>
+<ul>
+<li>Proporcionar un medio de pago r&aacute;pido, seguro y de bajo costo.</li>
+<li>Facilitar la identidad digital y la participaci&oacute;n ciudadana a trav&eacute;s de NFTs.</li>
+<li>Implementar un sistema deflacionario vinculado a datos reales, promoviendo la transparencia en la distribuci&oacute;n de recursos y programas sociales.</li>
+<li>Impulsar el turismo y el comercio local mediante alianzas estrat&eacute;gicas.</li>
+</ul>
+
+<h2>3. Tecnolog&iacute;a y Arquitectura</h2>
+<h3>3.1 Blockchain y Algorand ASA</h3>
+<p>AMLITOCOIN se implementa en la blockchain de Algorand mediante el est&aacute;ndar ASA (Algorand Standard Asset). Las principales caracter&iacute;sticas t&eacute;cnicas 
+del token son:</p>
+<ul>
+<li>Nombre del Token: Amlitocoin</li>
+<li>S&iacute;mbolo: AMLITO</li>
+<li>Supply Inicial: 300,000,000 tokens (con posibilidad de expansi&oacute;n mediante emisi&oacute;n controlada)</li>
+<li>Decimales: 2</li>
+<li>Roles: Manager, Reserve, Freeze y Clawback asignados a la cuenta de reserva, garantizando el control y la capacidad de ajuste del suministro.</li>
+</ul>
+
+<h3>3.2 Mecanismo de Emisi&oacute;n y Quema</h3>
+<p>El suministro se ajusta de forma din&aacute;mica utilizando datos del INEGI sobre nacimientos y defunciones. El proceso se describe a continuaci&oacute;n:</p>
+<ul>
+<li>Emisi&oacute;n (Minting):</li>
+</ul>
+<p>Por cada &ldquo;nacimiento&rdquo;, se emiten tokens a la cuenta de emisi&oacute;n.</p>
+<ul>
+<li>Quema (Burning):</li>
+</ul>
+<p>Por cada &ldquo;fallecimiento&rdquo;, se retiran tokens de circulaci&oacute;n envi&aacute;ndolos a una direcci&oacute;n de quema.</p>
+<p>Ejemplo de Implementaci&oacute;n:</p>
+<p>Supongamos que en un a&ntilde;o se registran 1,000 nacimientos y 400 fallecimientos.</p>
+<ul>
+<li>Emisi&oacute;n: 1,000 nacimientos = 1,000 AMLITO se emitir&aacute;n.</li>
+<li>Quema: 400 fallecimientos = 400 AMLITO se quemar&aacute;n.</li>
+</ul>
+<p>Estos valores se ajustan en las transacciones programadas de emisi&oacute;n y quema.</p>
+<p>Nota T&eacute;cnica:</p>
+<p>La automatizaci&oacute;n de estos procesos se realiza mediante transacciones programadas (usando Google Cloud Functions y Cloud Scheduler) que consultan la API del INEGI. 
+Se incluyen mecanismos de validaci&oacute;n y manejo de errores (por ejemplo, validaci&oacute;n de la integridad de los datos recibidos) para evitar cambios basados en 
+datos err&oacute;neos.</p>
+
+<h3>3.3 Arquitectura de Automatizaci&oacute;n</h3>
+<p>La automatizaci&oacute;n se logra mediante la integraci&oacute;n de:</p>
+<ul>
+<li>Google Cloud Functions:</li>
+</ul>
+<p>Ejecuta la l&oacute;gica de consulta a la API del INEGI, valida los datos y ejecuta las transacciones en Algorand.</p>
+<ul>
+<li>Google Cloud Scheduler:</li>
+</ul>
+<p>Programa la funci&oacute;n para que se ejecute peri&oacute;dicamente (por ejemplo, diariamente, mensual o anual).</p>
+<ul>
+<li>Variables de Entorno y Secret Manager:</li>
+</ul>
+<p>Garantizan la seguridad de credenciales y par&aacute;metros cr&iacute;ticos, evitando exponer claves en el c&oacute;digo.</p>
+
+<h3>3.4 Diagrama de Flujo de Automatizaci&oacute;n</h3>
+<p>Cloud Scheduler (Trigger) &#10145; Google Cloud Function &#10145; Consulta a API del INEGI &#10145; Validaci&oacute;n y procesamiento de datos</p>
+<p>&#10145; &iquest;Cambios detectados?</p>
+<p>&#9500;&#9472; S&iacute;: Emisi&oacute;n (Minting) &#10145; Transacci&oacute;n de emisi&oacute;n &#10145; Actualizaci&oacute;n de suministro</p>
+<p>&#9492;&#9472; &nbsp;S&iacute;: Quema (Burning) &#10145; Transacci&oacute;n de quema &#10145; Actualizaci&oacute;n de suministro</p>
+<p>&#10145; Registro en logs y notificaciones</p>
+<p>Este diagrama ilustra el flujo de automatizaci&oacute;n.</p>
+
+<h2>4. Tokenomics y Modelo Econ&oacute;mico</h2>
+<p>La econom&iacute;a de AMLITOCOIN se basa en los siguientes principios:</p>
+<ul>
+<li>Supply Deflacionario:</li>
+</ul>
+<p>La quema de tokens por defunciones reduce el suministro en circulaci&oacute;n, creando un mecanismo deflacionario similar a Bitcoin, pero ajustado a datos reales.</p>
+<ul>
+<li>Recompensas y Redistribuci&oacute;n:</li>
+</ul>
+<p>Se redistribuye parte de las transacciones a holders y se financian programas sociales, incentivando la participaci&oacute;n y fortaleciendo el valor del token.</p>
+<ul>
+<li>Transparencia y Gobernanza:</li>
+</ul>
+<p>Se implementar&aacute; un modelo DAO y se realizar&aacute;n auditor&iacute;as peri&oacute;dicas para garantizar la transparencia en el uso de los fondos y la evoluci&oacute;n del token.</p>
+<table>
+<tr><td><p>Par&aacute;metro</p></td><td><p>Detalle</p></td><td><p>Raz&oacute;n</p></td></tr>
+<tr><td><p>Suministro total</p></td><td><p>300.000.000 AMLITO</p></td><td><p>Reservar tokens para crecimiento y programas.</p></td></tr>
+<tr><td><p>Emisi&oacute;n (Minting)</p></td><td><p>Basado en datos reales (natalidad)</p></td><td><p>Fomentar la participaci&oacute;n y adaptaci&oacute;n poblacional.</p></td></tr>
+<tr><td><p>Quema (Burning)</p></td><td><p>Basado en datos reales (mortalidad)</p></td><td><p>Crear escasez y valor a largo plazo</p></td></tr>
+<tr><td><p>Recompensas</p></td><td><p>Redistribuci&oacute;n a titulares y financiaci&oacute;n social.</p></td><td><p>Incentivar el uso y participaci&oacute;n</p></td></tr>
+<tr><td><p>Liquidez</p></td><td><p>Integraci&oacute;n en Tinyman y otros DEX</p></td><td><p>Facilitar el trading y la adopci&oacute;n</p></td></tr>
+</table>
+
+<h2>5. Casos de Uso y Aplicaciones</h2>
+<h3>5.1 Pagos y Remesas</h3>
+<p>AMLITOCOIN se posiciona como un medio de pago eficiente en comercios f&iacute;sicos y digitales. Su r&aacute;pida confirmaci&oacute;n y bajas tarifas permiten 
+realizar remesas internacionales de forma &aacute;gil, superando a los m&eacute;todos tradicionales.</p>
+
+<h3>5.2 Identidad Digital</h3>
+<p>A trav&eacute;s de la emisi&oacute;n de NFTs vinculados a la identidad de cada ciudadano, AMLITOCOIN facilita procesos de votaci&oacute;n electr&oacute;nica, 
+acceso a servicios gubernamentales y verificaci&oacute;n de identidad, garantizando seguridad y privacidad.</p>
+
+<h3>5.3 Programas Sociales</h3>
+<p>El gobierno y organismos sociales pueden utilizar AMLITOCOIN para distribuir subsidios y programas sociales, con la transparencia que proporciona la blockchain, 
+    evitando malversaciones y garantizando el seguimiento en tiempo real.</p>
+
+<h3>5.4 Turismo y Comercio</h3>
+<p>AMLITOCOIN se convierte en un medio de cambio para turistas, facilitando el pago en establecimientos y servicios tur&iacute;sticos, 
+reduciendo comisiones por conversi&oacute;n y promoviendo la econom&iacute;a local.</p>
+
+<h2>6. Roadmap del Proyecto</h2>
+<p>La evoluci&oacute;n de AMLITOCOIN se planifica en cuatro fases:</p>
+
+<p>Fase 1 - Lanzamiento y Validaci&oacute;n (Q1 2025)</p>
+<ul>
+<li>Creaci&oacute;n del ASA en TestNet y validaci&oacute;n de funciones b&aacute;sicas.</li>
+<li>Pruebas de transacciones (opt-in, transferencias, congelamiento, clawback).</li>
+<li>Simulaci&oacute;n de emisi&oacute;n y quema con datos ficticios.</li>
+</ul>
+
+<p>Fase 2 - Migraci&oacute;n a MainNet y Distribuci&oacute;n (Q2 2025)</p>
+<ul>
+<li>Auditor&iacute;a y migraci&oacute;n a MainNet.</li>
+<li>Campa&ntilde;a de airdrop y adopci&oacute;n inicial.</li>
+<li>Integraci&oacute;n de NFTs de identidad.</li>
+</ul>
+
+<p>Fase 3 - Integraci&oacute;n en Ecosistema y Casos de Uso Reales (Q3 2025)</p>
+<ul>
+<li>Implementaci&oacute;n en comercios y servicios tur&iacute;sticos.</li>
+<li>Colaboraci&oacute;n con organismos gubernamentales para programas sociales.</li>
+<li>Expansi&oacute;n en el mercado de remesas.</li>
+</ul>
+
+<p>Fase 4 - Viralizaci&oacute;n Global y Gobernanza Descentralizada (Q4 2025 - 2026)</p>
+<ul>
+<li>Campa&ntilde;as virales y alianzas con influencers.</li>
+<li>Implementaci&oacute;n de un DAO para gobernanza.</li>
+<li>Expansi&oacute;n a otros mercados de Latinoam&eacute;rica.</li>
+</ul>
+
+<h2>7. Estrategia de Marketing y Comunidad</h2>
+<p>AMLITOCOIN combina elementos de pol&iacute;tica, cultura pop y tecnolog&iacute;a blockchain. La estrategia de marketing se enfoca en:</p>
+<ul>
+<li>Campa&ntilde;as en Redes Sociales:</li>
+</ul>
+<p>Uso de hashtags (#AMLITOCOINToTheMoon, #CryptoCuartaTransformaci&oacute;n) y challenges en TikTok para viralizar la marca.</p>
+<ul>
+<li>Meme Factory:</li>
+</ul>
+<p>Plataforma donde los usuarios crean memes y ganan tokens, fomentando la participaci&oacute;n y viralidad.</p>
+<ul>
+<li>Eventos y Airdrops:</li>
+</ul>
+<p>Realizaci&oacute;n de meetups virtuales y airdrops para impulsar la adopci&oacute;n y generar FOMO (Fear Of Missing Out).</p>
+<ul>
+<li>Alianzas Estrat&eacute;gicas:</li>
+</ul>
+<p>Colaboraciones con influencers, artistas y desarrolladores para potenciar la imagen y alcance del proyecto.</p>
+
+<h2>8. Seguridad, Aspectos Regulatorios y Gobernanza</h2>
+<p>La seguridad es primordial. Por ello, AMLITOCOIN se apoya en:</p>
+
+<h3>8.1 Auditor&iacute;as y Revisi&oacute;n de C&oacute;digo:</h3>
+<ul>
+<li>Auditor&iacute;as continuas por expertos en seguridad blockchain.</li>
+<li>Revisi&oacute;n y actualizaci&oacute;n peri&oacute;dica de los Smart Contracts y el c&oacute;digo de automatizaci&oacute;n.</li>
+</ul>
+
+<h3>8.2 Gobernanza Descentralizada:</h3>
+<ul>
+<li>Inicialmente, el control se realizar&aacute; mediante una cuenta multisig.</li>
+<li>Evolucionar&aacute; hacia un modelo DAO, permitiendo la toma de decisiones colectiva y transparente.</li>
+</ul>
+
+<h3>8.3 Transparencia en el Uso de Fondos:</h3>
+<ul>
+<li>Todas las transacciones se registran en la blockchain y se publican informes peri&oacute;dicos.</li>
+<li>Se implementar&aacute;n mecanismos de notificaci&oacute;n y logs p&uacute;blicos para que la comunidad pueda auditar el sistema.</li>
+</ul>
+
+<h3>8.4 Aspectos Regulatorios y Legales:</h3>
+<ul>
+<li>Se realizar&aacute; un an&aacute;lisis de cumplimiento normativo en M&eacute;xico y Latinoam&eacute;rica.</li>
+<li>Se establecer&aacute;n mecanismos de verificaci&oacute;n para asegurar que el uso del token se alinee con la legislaci&oacute;n vigente.</li>
+<li>Se incluir&aacute;n cl&aacute;usulas de responsabilidad y transparencia en la documentaci&oacute;n oficial.</li>
+</ul>
+
+<h3>8.5 Reglas de Gobernanza y Seguridad:</h3>
+<ul>
+<li>Freeze & Clawback: Activado solo en casos excepcionales (fraude, hackeo) y requiere aprobaci&oacute;n mediante un proceso multisig/DAO.</li>
+<li>Quema (Burning): Irreversible, lo que garantiza la deflaci&oacute;n del token de manera transparente.</li>
+</ul>
+
+<h2>9. Conclusi&oacute;n</h2>
+<p>AMLITOCOIN no es solo un token; es un movimiento que integra tecnolog&iacute;a, cultura y pol&iacute;tica para empoderar a la ciudadan&iacute;a mexicana y 
+latinoamericana. Con un modelo econ&oacute;mico basado en datos reales y una automatizaci&oacute;n robusta para la emisi&oacute;n y quema de tokens, el proyecto ofrece:</p>
+<ul>
+<li>Inclusi&oacute;n financiera y una alternativa innovadora de pago.</li>
+<li>Transparencia y seguridad a trav&eacute;s de la blockchain.</li>
+<li>Una plataforma para el cambio social con participaci&oacute;n comunitaria.</li>
+</ul>
+<p>Invitamos a desarrolladores, inversores y ciudadanos a unirse a esta revoluci&oacute;n para construir juntos el futuro de las criptomonedas en beneficio del pueblo.</p>
+
+<h2>Ap&eacute;ndice</h2>
+<p>A. Glosario</span></p>
+<ul>
+<li>ASA (Algorand Standard Asset): Est&aacute;ndar para la creaci&oacute;n de tokens en Algorand.</li>
+<li>Minting (Emisi&oacute;n): Proceso de creaci&oacute;n y distribuci&oacute;n de nuevos tokens.</li>
+<li>Burning (Quema): Proceso de retirar tokens de circulaci&oacute;n de forma irreversible.</li>
+<li>Clawback: Mecanismo para recuperar tokens de una cuenta, activada en situaciones excepcionales.</li>
+<li>Freeze: Funci&oacute;n para bloquear tokens en una cuenta, activada en situaciones excepcionales.</li>
+<li>DAO (Decentralized Autonomous Organization): Organizaci&oacute;n gobernada de forma descentralizada por sus miembros.</li>
+</ul>
+<p>B. Enlaces de Inter&eacute;s</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://developer.algorand.org">Documentaci&oacute;n de Algorand</a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.inegi.org.mx/temas/estructura">Demograf&iacute;a y Sociedad</a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://amlitocoin.com">Amlitocoin.com</a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://perawallet.app">Pera Wallet</a></p>
+
+<footer style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px;">
+<div class="logo-container">
+<img src="amlito.png" alt="Símbolo de AMLITOCOIN" width="60">
+</div>
+<p style="text-align: center; color: var(--secondary-color);">© 2025 Amlitocoin. Todos los derechos reservados memeticamente.</p>
+</footer>
+</body>
+</html>
