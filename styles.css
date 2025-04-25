@@ -907,7 +907,7 @@ footer p {
 }
 
 /* ===== media-queries.css ===== */
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
     .nav-list {
       display: none;
       position: absolute;
